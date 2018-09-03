@@ -2,6 +2,6 @@
 namespace models;
 class User{
     public function getName(){
-        return "hello";
+        return "tom";
     }
 }

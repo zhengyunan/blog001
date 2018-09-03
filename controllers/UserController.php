@@ -7,8 +7,11 @@ class UserController{
         $user = new user;
         $name = $user->getName();
         //加载视图
-        view('user.hello',[
+        view('users.hello', [
             'name'=>$name
-        ])
+        ]);
+    }
+    public function word(){
+        echo "word";
     }
 }
