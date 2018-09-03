@@ -8,6 +8,13 @@ function autoload($class){
 }
 spl_autoload_register('autoload');
 
+if(php_sapi_name() == 'cli')
+{
+    $controller = ucfirst($argv[1]) . 'Controller';
+    $action = $argv[2];
+}
+else
+{
 if(isset($_SERVER['PATH_INFO'])){
     $pathInfo =explode('/' , $_SERVER['PATH_INFO']);
     // var_dump($_SERVER['PATH_INFO']);
@@ -19,6 +26,7 @@ if(isset($_SERVER['PATH_INFO'])){
 }else {
     $controller = 'IndexController';
     $action = 'index';
+}
 }
 //为控制器添加命名空间
 $fullController = 'controllers\\'.$controller;
