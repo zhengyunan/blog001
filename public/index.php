@@ -1,6 +1,10 @@
 <?php
+// 动态的修改 php.ini 配置文件
+// ini_set('session.save_handler', 'redis');   // 使用 redis 保存 SESSION
+// ini_set('session.save_path', 'tcp://127.0.0.1:6379?database=15');  // 设置 redis 服务器的地址、端口、使用的数据库
+// session_start();
 define('ROOT',dirname(__FILE__) . '/../');
-
+require(ROOT.'vendor/autoload.php');
 function autoload($class){
     $path = str_replace('\\','/',$class);
     // echo ROOT .$path. 'php';
