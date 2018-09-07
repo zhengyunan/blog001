@@ -100,4 +100,46 @@ class Blog{
       file_put_contents(ROOT.'public/index.html', $str);
     //   ob_clean();
     }
+
+    //从数据库中取出日志的浏览量
+    public function getDisplay($id){
+        $id = (int)$_GET['id'];
+        //链接radis
+        $redis = new \Predis\Client([
+            'scheme' => 'tcp',
+            'host'   => '127.0.0.1',
+            'port'   => 6379,
+        ]);
+        //判断blog_display 这个hash中有没有blog-$id
+        $key = "blog-{$id}";
+        if($redis->hexists('blog_display',$key)){
+           $newNum=$redis->hincrby('blog_display',$key,1);
+           return $newNum;
+        }else{
+            $stmt = $this->pdo->prepare('SELECT display FROM mvc_blogs WHERE id=?');
+            $stmt->execute([$id]);
+            $display =$stmt->fetch(PDO::FETCH_COLUMN);
+            $display++;
+            $redis->hset('blog_display',$key,$display);
+            return $display;
+        }        
+    }
+    //吧内存中数据取出来  更新到数据库
+
+    public function displayToDb(){
+        $redis = new \Predis\Client([
+            'scheme' => 'tcp',
+            'host'   => '127.0.0.1',
+            'port'   => 6379,
+        ]);
+        $data=$redis->hgetall('blog_display');
+        // var_dump($data);
+        foreach($data as $k=>$v){
+             $id = str_replace('blog-','',$k);
+            //  var_dump($id);
+             $sql = "UPDATE mvc_blogs SET display={$v} WHERE id={$id}";
+            //  var_dump($sql);
+             $this->pdo->exec($sql);
+        }
+    }
 }
