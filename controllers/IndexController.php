@@ -2,6 +2,7 @@
 namespace controllers;
 class IndexController {
     public function index(){
-        phpinfo();
+        view('index.index');
+        // echo "wew";
     }
 }

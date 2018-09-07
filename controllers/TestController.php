@@ -3,16 +3,19 @@ namespace controllers;
 
 class TestController
 {
+    public function testLog()
+    {
+        // echo "aaa";
+        $log = new \libs\Log('email');
+        
+        $log->log("日志妮儿");
+    }
     public function register()
     {
         // 注册成功
 
         // 发邮件
-        $redis = new \Predis\Client([
-            'scheme' => 'tcp',
-            'host'   => '127.0.0.1',
-            'port'   => 6379,
-        ]);
+        $redis = \libs\Redis::getInstance();
 
         // 消息队列的信息
         $data = [

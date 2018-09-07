@@ -44,3 +44,13 @@ function view($viewFileName,$data=[]){
     $path = str_replace('.','/',$viewFileName) .'.html';
     require(ROOT.'views/'.$path);
 }
+
+function config($name){
+    //引入配置文件
+    static $config = null;
+    if($config===null){
+        $config = require(ROOT.'config.php');
+    }
+    
+    return $config[$name];
+}

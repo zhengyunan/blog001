@@ -1,0 +1,24 @@
+<?php
+return [
+    'redis' => [
+        'scheme' => 'tcp', 
+         'host'   => '127.0.0.1',
+         'port'   => 6379,
+    ],
+    'db' => [
+        'host' => '127.0.0.1',
+        'dbname' => '',
+        'user' => 'root',
+        'pass' => '',
+        'charset' => 'utf8',
+    ],
+    'email' => [
+        'mode'=>'debug',
+        'port' => 25,
+        'host' => 'smtp.126.com',
+        'name' => 'zhengyunan01@126.com',
+        'pass' => 'zyn990607',
+        'from_email' => 'zhengyunan01@126.com',
+        'from_name' => '郑宇楠',
+    ]
+];

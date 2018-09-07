@@ -1,15 +1,7 @@
 <?php
 namespace models;
 use PDO;
-class Blog{
-    public $pdo;
-    public function __construct()
-    {
-        // 取日志的数据
-        $this->pdo = new PDO('mysql:host=127.0.0.1;dbname=mvc', 'root', '');
-        $this->pdo->exec('SET NAMES utf8');
-    }
-
+class Blog extends Base{
     //搜索日志
     public function search(){
         //取日志列表
@@ -58,7 +50,7 @@ class Blog{
         $offset = ($page-1)*$perpage;
         /*================ 翻面按钮 ******************************************/
         // 取总的记录数
-        $stmt = $this->pdo->prepare("SELECT COUNT(*) FROM mvc_blogs WHERE $where");
+        $stmt = self::$pdo->prepare("SELECT COUNT(*) FROM mvc_blogs WHERE $where");
         $stmt->execute($value);
         $recordCount = $stmt->fetch(PDO::FETCH_COLUMN);
         // echo($recordCount);
@@ -78,7 +70,7 @@ class Blog{
             $pageBtn .= "<a class='$active' href='?page={$i}'> {$i} </a>";
              
         }
-        $stmt = $this->pdo->query("SELECT * FROM mvc_blogs WHERE $where ORDER BY $orderBy $orderyWay LIMIT $offset,$perpage "); 
+        $stmt = self::$pdo->query("SELECT * FROM mvc_blogs WHERE $where ORDER BY $orderBy $orderyWay LIMIT $offset,$perpage "); 
         $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         return [
@@ -88,7 +80,7 @@ class Blog{
     }
 
     public function index2html(){
-      $stmt = $this->pdo->query("SELECT * FROM mvc_blogs WHERE is_show=1 ORDER BY id DESC LIMIT 20");
+      $stmt = self::$pdo->query("SELECT * FROM mvc_blogs WHERE is_show=1 ORDER BY id DESC LIMIT 20");
       $blogs = $stmt->fetchAll(PDO::FETCH_ASSOC);
       //开启一个缓冲区
       ob_start();
@@ -105,18 +97,14 @@ class Blog{
     public function getDisplay($id){
         $id = (int)$_GET['id'];
         //链接radis
-        $redis = new \Predis\Client([
-            'scheme' => 'tcp',
-            'host'   => '127.0.0.1',
-            'port'   => 6379,
-        ]);
+        $redis = \libs\Redis::getInstance();
         //判断blog_display 这个hash中有没有blog-$id
         $key = "blog-{$id}";
         if($redis->hexists('blog_display',$key)){
            $newNum=$redis->hincrby('blog_display',$key,1);
            return $newNum;
         }else{
-            $stmt = $this->pdo->prepare('SELECT display FROM mvc_blogs WHERE id=?');
+            $stmt =self::$pdo->prepare('SELECT display FROM mvc_blogs WHERE id=?');
             $stmt->execute([$id]);
             $display =$stmt->fetch(PDO::FETCH_COLUMN);
             $display++;
@@ -127,11 +115,7 @@ class Blog{
     //吧内存中数据取出来  更新到数据库
 
     public function displayToDb(){
-        $redis = new \Predis\Client([
-            'scheme' => 'tcp',
-            'host'   => '127.0.0.1',
-            'port'   => 6379,
-        ]);
+        $redis = \libs\Redis::getInstance();
         $data=$redis->hgetall('blog_display');
         // var_dump($data);
         foreach($data as $k=>$v){
@@ -139,7 +123,7 @@ class Blog{
             //  var_dump($id);
              $sql = "UPDATE mvc_blogs SET display={$v} WHERE id={$id}";
             //  var_dump($sql);
-             $this->pdo->exec($sql);
+             self::$pdo->exec($sql);
         }
     }
 }

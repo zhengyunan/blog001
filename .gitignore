@@ -2,3 +2,5 @@
 /vendor/
 /public/index.html
 /composer.lock
+/config.php
+/logs/
