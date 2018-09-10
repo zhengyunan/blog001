@@ -56,6 +56,25 @@ class BlogController{
         $blog->index2html();
         
     }
+    public function edit(){
+        $id = $_GET['id'];
+        $blog =new Blog;
+        $data=$blog->find($id);
+        view('blogs.edit',[
+            'data'=>$data,
+        ]);
+    }
+
+    public function update(){
+        $title = $_POST['title'];
+        $content = $_POST['content'];
+        $is_show = $_POST['is_show'];
+        $id = $_POST['id'];
+        $blog = new Blog;
+        $blog->update($title,$content,$is_show,$id);
+        message('修改成功',0,'/blog/index');
+
+    }
     public function updated_display(){
         $id = (int)$_GET['id'];
         //链接radis

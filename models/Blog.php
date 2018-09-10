@@ -10,6 +10,25 @@ class Blog extends Base{
         ]);
 
     }
+
+    // 取一条数据
+    public function find($id){
+        $stmt = self::$pdo->prepare('SELECT * FROM mvc_blogs WHERE id = ?');
+        $stmt->execute([
+            $id
+        ]);
+        return $stmt->fetch();
+    }
+    public function update($title,$content,$is_show,$id){
+
+        $stmt = self::$pdo->prepare("UPDATE mvc_blogs SET title=?,content=?,is_show=? WHERE id=?" );
+        $ret = $stmt->execute([
+            $title,
+            $content,
+            $is_show,
+            $id,
+        ]);
+    }
        //搜索日志
     public function search(){
         //取日志列表
