@@ -2,33 +2,47 @@
 namespace models;
 use PDO;
 class Blog extends Base{
-    //搜索日志
+    public function delete($id){
+        $stmt=self::$pdo->prepare('DELETE FROM mvc_blogs where id=? AND user_id=?');
+        $ret=$stmt->execute([
+            $id,
+            $_SESSION['id'],
+        ]);
+
+    }
+       //搜索日志
     public function search(){
         //取日志列表
         // $pdo = new PDO("mysql:host=127.0.0.1;dbname=mvc",'root','');
         // $pdo->exec('SET NAMES utf8');
-        $where = 1;
+        $where = 'user_id='.$_SESSION['id'];
         $value=[];
-        if(isset($_GET['keyword'])&&$_GET['keyword']){
-            $where = "title like '%".$_GET['keyword']."%' OR content like '%".$_GET['keyword']."%'";
-        }
-        // if(isset($_GET['keyword'])&&$_GET['keyword']){
-        //    $where.=" AND (title LIKE ? OR content LIKE ?)";
-        //    $value[] = '%'.$_GET['keyword'].'%';
-        //    $value[] = '%'.$_GET['keyword'].'%';
-        // }
-        if(isset($_GET['start_date']) && $_GET['start_date'])
-        {
-        $where .= " AND created_at >= '{$_GET['start_date']}'";
-        }
-        if(isset($_GET['end_date']) && $_GET['end_date'])
-        {
-        $where .= " AND created_at <= '{$_GET['end_date']}'";
-        }
-        if(isset($_GET['is_show']) && ($_GET['is_show']==1 || $_GET['is_show']==='0' ))
-        {
-        $where .= " AND is_show='{$_GET['is_show']}'";
-        }
+         // 如果有keword 并值不为空时
+         if(isset($_GET['keyword']) && $_GET['keyword'])
+         {
+             $where .= " AND (title LIKE ? OR content LIKE ?)";
+             $value[] = '%'.$_GET['keyword'].'%';
+             $value[] = '%'.$_GET['keyword'].'%';
+         }
+ 
+         if(isset($_GET['start_date']) && $_GET['start_date'])
+         {
+             $where .= " AND created_at >= ?";
+             $value[] = $_GET['start_date'];
+         }
+ 
+         if(isset($_GET['end_date']) && $_GET['end_date'])
+         {
+             $where .= " AND created_at <= ?";
+             $value[] = $_GET['end_date'];
+         }
+ 
+         if(isset($_GET['is_show']) && ($_GET['is_show']==1 || $_GET['is_show']==='0'))
+         {
+             $where .= " AND is_show = ?";
+             $value[] = $_GET['is_show'];
+         }
+ 
 
         /************排序***** */
         $orderBy = 'created_at';
@@ -70,7 +84,9 @@ class Blog extends Base{
             $pageBtn .= "<a class='$active' href='?page={$i}'> {$i} </a>";
              
         }
-        $stmt = self::$pdo->query("SELECT * FROM mvc_blogs WHERE $where ORDER BY $orderBy $orderyWay LIMIT $offset,$perpage "); 
+        $stmt = self::$pdo->prepare("SELECT * FROM mvc_blogs WHERE $where ORDER BY $orderBy $orderyWay LIMIT $offset,$perpage "); 
+        // var_dump($stmt);
+        $stmt->execute($value);
         $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         return [
@@ -125,5 +141,27 @@ class Blog extends Base{
             //  var_dump($sql);
              self::$pdo->exec($sql);
         }
+    }
+
+    public function add($title,$content,$is_show){
+        $stmt=self::$pdo->prepare("INSERT INTO mvc_blogs(title,content,is_show,user_id) VALUES(?,?,?,?)");
+        // $stmt=self::$pdo->prepare("INSERT INTO mvc_blogs(title,content,is_show,user_id) VALUES(?,?,?,?)");
+        $ret=$stmt->execute([
+            $title,
+            $content,
+            $is_show,
+            $_SESSION['id'],
+
+        ]);
+        var_dump($stmt);
+        if(!$ret){
+            echo '失败';
+            $error = $stmt->errorInfo();
+            echo '<pre>';
+            var_dump($error);
+            exit;
+        }
+        //返回新插入记录的id
+        return self::$pdo->lastInsertId();
     }
 }
