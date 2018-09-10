@@ -94,7 +94,11 @@ class Blog extends Base{
             'pageBtn'=>$pageBtn
         ] ;
     }
-
+    public function getNew()
+    {
+        $stmt = self::$pdo->query('SELECT * FROM mvc_blogs WHERE is_show=1 ORDER BY id DESC LIMIT 20');
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
     public function index2html(){
       $stmt = self::$pdo->query("SELECT * FROM mvc_blogs WHERE is_show=1 ORDER BY id DESC LIMIT 20");
       $blogs = $stmt->fetchAll(PDO::FETCH_ASSOC);

@@ -10,6 +10,7 @@
     <?php view('common.nav') ?>
     <h1>注册</h1>
     <form action="/user/store" method="post">
+        <?php scrf_field()?>
         <div>
             邮箱：
             <input type="text" name="email">

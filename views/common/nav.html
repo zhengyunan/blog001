@@ -19,9 +19,10 @@
 <h1>治疗系统</h1>
 <hr>
 <a href="/">首页</a>
-<a href="/blog/index">日志列表</a>
+
 <?php if(isset($_SESSION['id'])):?>
     <?=$_SESSION['email']?>
+    <a href="/blog/index">日志列表</a>
     <a href="/user/logout">退出</a>
 <?php else:?>
 <a href="/user/regist">注册</a>
