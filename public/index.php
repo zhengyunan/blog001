@@ -1,4 +1,9 @@
 <?php
+// phpinfo();
+ini_set('session.save_handler', 'redis');   // 使用 redis 保存 SESSION
+ini_set('session.save_path', 'tcp://127.0.0.1:6379?database=0');  // 设置 redis 服务器的地址、端口、使用的数据库    
+ini_set('session.gc_maxlifetime', 600);   // 设置 SESSION 10分钟过期
+session_start();
 // 动态的修改 php.ini 配置文件
 // ini_set('session.save_handler', 'redis');   // 使用 redis 保存 SESSION
 // ini_set('session.save_path', 'tcp://127.0.0.1:6379?database=15');  // 设置 redis 服务器的地址、端口、使用的数据库
@@ -9,6 +14,9 @@ function autoload($class){
     $path = str_replace('\\','/',$class);
     // echo ROOT .$path. 'php';
     require(ROOT . $path . '.php');
+
+
+
 }
 spl_autoload_register('autoload');
 
@@ -53,4 +61,38 @@ function config($name){
     }
     
     return $config[$name];
+}
+
+// 跳转任意
+function redirect($url){
+    header('Location:'.$url);
+    exit;
+}
+// 让网页跳回上一个页面
+function back(){
+    redirect($_SERVER['HTTP_REFERER']);
+}
+
+//操作成功
+
+function message($message,$type,$url,$seconds=5){
+     if($type==0){
+        echo "<script>alert('{$message}');location.href='{$url}';</script>";
+        exit;
+     }else if($type == 1)
+     {
+         // 加载消息页面
+         view('common.success', [
+             'message' => $message,
+             'url' => $url,
+             'seconds' => $seconds
+         ]);
+     }
+     else if($type==2)
+     {
+         // 把消息保存到 SESSION
+         $_SESSION['_MESS_'] = $message;
+         // 跳转到下一个页面
+         redirect($url);
+     }
 }

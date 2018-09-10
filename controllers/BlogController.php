@@ -3,6 +3,12 @@ namespace controllers;
 use PDO;
 use models\Blog;
 class BlogController{
+    
+    public function create(){
+        view('blogs.create');
+    }
+
+
     public function index(){
         $blog = new Blog;
         $data=$blog->search();

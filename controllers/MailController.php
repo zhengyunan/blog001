@@ -12,7 +12,7 @@ class MailController{
         while(true){
             $data=$redis->brpop('email',0);
             $message = json_decode($data[1], TRUE);
-    
+             
             //发邮件
             $mailer->send($message['title'],$message['content'],$message['from']);
             echo "发送邮件成功 继续等待下一个  \r\n";

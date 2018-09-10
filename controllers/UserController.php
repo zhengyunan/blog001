@@ -1,6 +1,5 @@
 <?php
 namespace controllers;
-
 use models\User;
 class UserController{
     public function regist(){
@@ -35,12 +34,14 @@ class UserController{
             $from = [$email,$name[0]];
             $message = [
                 'title'=>'治疗系统账号激活',
-                'content'=>"点击以下按钮进行激活<br>激活码是:{$code}",
+                'content'=>"点击以下按钮进行激活<br>点击激活:
+                <a href='http://localhost:9999/user/active_user?code={$code}'>http://localhost:9999/user/active_user?code={$code}</a>
+                <p>如果上面按钮不能点击请复制上面链接地址</p>",
                 'from'=>$from,
 
             ];
             $message = JSON_encode($message);
-            var_dump($message);
+            // var_dump($message);
             //放到队列里
             $redis = \libs\Redis::getInstance();
             $redis->lpush('email',$message);
@@ -52,13 +53,49 @@ class UserController{
         // }
 
     }
-    public function activeUser(){
+    public function active_user(){
         //接受激活码
         $code = $_GET['code'];
         //到redis取激活码
         $redis = \libs\Redis::getInstance();
         //拼出名字
         $key = 'temp_user:'.$code;
-        //
+        //取出数据
+        $data = $redis->get($key);
+        if($data){
+            $redis->del($key);
+            $data = json_decode($data,true);
+            // var_dump($data);
+            $user = new \models\User;
+            $user->add($data['email'],$data['password']);
+            header('Localhost:/user/login');
+            //跳转登录页面
+            
+        }
     }
+
+    public function login(){
+        view('users.login');
+    }
+    public function dologin()
+{
+    $email = $_POST['email'];
+    $password = md5($_POST['password']);
+    
+    $user = new \models\User;
+    if($user->login($email, $password))
+    {
+        message('登录成功！', 2, '/blog/index');
+    }
+    else
+    {
+        message('账号或者密码错误', 2, '/user/login');
+    }
+}
+
+   public function logout(){
+    //    echo "aaa";
+       $_SESSION = [];
+       message('退出成功',2,'/');
+   }
 }
