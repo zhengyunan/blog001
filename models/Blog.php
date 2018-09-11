@@ -176,7 +176,7 @@ class Blog extends Base{
             $_SESSION['id'],
 
         ]);
-        var_dump($stmt);
+        // var_dump($stmt);
         if(!$ret){
             echo '失败';
             $error = $stmt->errorInfo();
@@ -186,5 +186,23 @@ class Blog extends Base{
         }
         //返回新插入记录的id
         return self::$pdo->lastInsertId();
+    }
+
+
+    public function makeHtml($id){
+        //取出日志的信息
+        $blog = $this->find($id);
+        // 打开缓冲区  并且加载视图
+        ob_start();
+        view('blogs.content',[
+            'blog'=>$blog,
+        ]);
+        // 从缓冲区取出视图写到静态页面
+        $str = ob_get_clean();
+        file_put_contents(ROOT.'public/contents/'.$id.'.html',$str);
+
+    }
+    public function deleteHtml($id){
+        @unlink(ROOT.'public/contents/'.$id.'.html');
     }
 }

@@ -4,9 +4,10 @@ use PDO;
 use models\Blog;
 class BlogController{
     public function delete(){
-        $id = $_GET['id'];
+        $id = $_POST['id'];
         $blog = new Blog;
         $blog->delete($id);
+        $blog->deleteHtml($id);
         message('删除成功',2,'/blog/index');
     }
     
@@ -19,8 +20,13 @@ class BlogController{
         $content = $_POST['content'];
         $is_show = $_POST['is_show'];
         $blog = new Blog;
-        $blog->add($title,$content,$is_show);
+        //返回新日志id
+        $id=$blog->add($title,$content,$is_show);
+        var_dump($id);
         //跳转
+        if($is_show==1){
+            $blog->makeHtml($id);
+        }
         message('发表日志成功',2,'/blog/index');
 
     }
@@ -72,6 +78,11 @@ class BlogController{
         $id = $_POST['id'];
         $blog = new Blog;
         $blog->update($title,$content,$is_show,$id);
+        if($is_show==1){
+            $blog->makeHtml($id);
+        }else{
+            $blog->deleteHtml($id);
+        }
         message('修改成功',0,'/blog/index');
 
     }
@@ -79,11 +90,28 @@ class BlogController{
         $id = (int)$_GET['id'];
         //链接radis
            $blog = new Blog;
-           echo $blog->getDisplay($id);
+           $display= $blog->getDisplay($id);
+        //    返回多个数据用json
+        echo json_encode([
+            'display'=>$display,
+            'email'=>isset($_SESSION['email']) ? $_SESSION['email']:'',
+        ]);
            
     }
     public function displayToDb(){
         $blog = new Blog;
         $blog->displayToDb();
+    }
+    // 查看私有日志
+    public function content(){
+         $id = $_GET['id'];
+         $model = new blog;
+         $blog = $model->find($id);
+         //判断这个日志是不是我的日志
+         if($_SESSION['id']!=$blog['user_id'])
+         die('无权访问');
+         view('blogs.content',[
+             'blog'=>$blog,
+         ]);
     }
 }
