@@ -1,6 +1,7 @@
 <?php
 namespace controllers;
 use models\User;
+use models\Order;
 class UserController{
     public function regist(){
         view('users.add');
@@ -98,4 +99,22 @@ class UserController{
        $_SESSION = [];
        message('退出成功',2,'/');
    }
+
+
+//    充值
+    public function charge()
+    {
+        view('users.charge');
+    }
+    public function docharge(){
+        $money = $_POST['money'];
+        // var_dump($money);
+        // die;
+        $model = new Order;
+        $model->create($money);
+        message('充值订单已生成,请立即支付',2,'/user/orders');
+    }
+    public function orders(){
+        view('users.orders');
+    }
 }

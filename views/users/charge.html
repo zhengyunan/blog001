@@ -8,23 +8,19 @@
 </head>
 <body>
     <?php view('common.nav') ?>
-    <h1>注册</h1>
-    <form action="/user/store" method="post">
-        <?php=scrf_field()?>
+    <h1>充值</h1>
+    
+    <form action="/user/docharge" method="post">
+        <?php= scrf_field()?>
         <div>
-            邮箱：
-            <input type="text" name="email">
-        </div>
-        <div>密码：
-            <input type="password" name="password">
+            充值金额：
+            <input type="text" name="money">
         </div>
         <div>
-            <input type="submit" value="注册">
+            <input type="submit" value="充值">
         </div>
-     
-     
-
     </form>
+    
     <?php view('common.footer') ?>
 </body>
 </html>
