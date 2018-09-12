@@ -91,4 +91,19 @@ class TestController
     public function aa(){
         echo "acn";
     }
+
+    public function testSnowflake(){
+         $flake = new \libs\Snowflake(1013);
+         for($i=0;$i<10;$i++){
+             echo $flake->nextId().'<br>';
+         }
+    }
+    // public function testSnowflake()
+    // {
+    //     $flake = new \libs\Snowflake(1013);
+    //     for($i=0; $i<10;$i++) {  
+    //         echo $flake->nextId() . '<br>';
+    //     }
+
+    // }
 }

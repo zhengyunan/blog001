@@ -1,6 +1,6 @@
 <?php
 namespace models;
-// use PDO;
+use PDO;
 class User extends Base{
     
     public function add($email,$password){
@@ -21,10 +21,30 @@ class User extends Base{
         if($user){
             $_SESSION['id']=$user['id'];
             $_SESSION['email']=$user['email'];
+            $_SESSION['money'] = $user['money'];
             return TRUE;
         }else{
             return FALSE;
         }
     }
+
+    public function addMoney($money,$user_id){
+        $stmt = self::$pdo->prepare("UPDATE users SET money=money+? WHERE id=?");
+        return $stmt->execute([
+            $money,
+            $user_id,
+        ]);
+        
+    }
     
+    public function getMoney(){
+        $id=$_SESSION['id'];
+        //查询数据库
+        $stmt = self::$pdo->prepare('SELECT money FROM users WHERE id=?');
+        $stmt->execute([$id]);
+        $money = $stmt->fetch(PDO::FETCH_COLUMN);
+        //更新数据到session中
+        $_SESSION['money'] = $money;
+        return $money;
+    }
 } 

@@ -103,18 +103,27 @@ class UserController{
 
 //    充值
     public function charge()
-    {
+    {  
         view('users.charge');
     }
-    public function docharge(){
+    public function docharge()
+    {
+        // 生成订单
         $money = $_POST['money'];
-        // var_dump($money);
-        // die;
         $model = new Order;
         $model->create($money);
-        message('充值订单已生成,请立即支付',2,'/user/orders');
+        message('充值订单已生成，请立即支付！', 2, '/user/orders');
     }
     public function orders(){
-        view('users.orders');
+        $order = new Order;
+        $data=$order->search();
+
+        // echo '<pre>';
+        // var_dump($data);
+        view('users.order',$data);
+    }
+    public function money(){
+        $user = new User;
+        echo $user->getMoney();
     }
 }

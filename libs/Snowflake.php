@@ -53,7 +53,9 @@ class Snowflake
         $workerIdShift = self::sequenceBits;  
         //组合3段数据返回: 时间戳.工作机器.序列  
         $nextId = (($timestamp - self::twepoch) << $timestampLeftShift) | ($this->workId << $workerIdShift) | self::$sequence;  
-        return $nextId;  
+        // var_dump($nextId);
+        return $nextId; 
+        
     }  
   
     //取当前时间毫秒  

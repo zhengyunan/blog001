@@ -15,7 +15,7 @@ class AlipayController
         
 
         // 通知地址
-        'notify_url' => 'http://requestbin.fullcontact.com/pkqexppk',
+        'notify_url' => 'http://aaa.tunnel.echomod.cn/alipay/notify',
         // 跳回地址
         'return_url' => 'http://localhost:9999/alipay/return',
         
@@ -23,19 +23,27 @@ class AlipayController
         'mode' => 'dev',
         
     ];
+
     // 发起支付
     public function pay()
     {   
-        //生成订单
-        $order = [
-            'out_trade_no' => time(),    // 本地订单ID
-            'total_amount' => '0.01',    // 支付金额
-            'subject' => 'test subject', // 支付标题
-        ];
-        
-        //跳转到支付宝
-        $alipay = Pay::alipay($this->config)->web($order);
-        $alipay->send();
+        // echo "aaa";
+        $sn = $_POST['sn'];
+        $order = new \models\Order;
+        $data=$order->findBySn($sn);
+        // var_dump($data);
+        // die;
+        //判断订单状态  没支付可以支付  若支付过啦  就不能支付啦
+        if($data['status']==0){
+            $alipay = Pay::alipay($this->config)->web([
+                'out_trade_no' => $sn,    // 本地订单ID
+                'total_amount' => $data['money'],    // 支付金额
+                'subject' => '用户充值:'.$data['money'].'元', // 支付标题
+            ]);
+            $alipay->send();
+        }else{
+            die("订单状态不允许支付");
+        }
     }
     // 支付完成跳回
     public function return()
@@ -48,16 +56,47 @@ class AlipayController
     public function notify()
     {
         $alipay = Pay::alipay($this->config);
+
         try{
-            $data = $alipay->verify(); // 是的，验签就这么简单！
+
+            $data = $alipay->verify();
+            //  var_dump($data);
+            // die;
+            // 是的，验签就这么简单！
             // 这里需要对 trade_status 进行判断及其它逻辑进行判断，在支付宝的业务通知中，只有交易通知状态为 TRADE_SUCCESS 或 TRADE_FINISHED 时，支付宝才会认定为买家付款成功。
             // 1、商户需要验证该通知数据中的out_trade_no是否为商户系统中创建的订单号；
             // 2、判断total_amount是否确实为该订单的实际金额（即商户订单创建时的金额）；
-            echo '订单ID：'.$data->out_trade_no ."\r\n";
-            echo '支付总金额：'.$data->total_amount ."\r\n";
-            echo '支付状态：'.$data->trade_status ."\r\n";
-            echo '商户ID：'.$data->seller_id ."\r\n";
-            echo 'app_id：'.$data->app_id ."\r\n";
+            if($data->trade_status == 'TRADE_SUCCESS' || $data->trade_status == 'TRADE_FINISHED')
+            {
+                $order = new \models\Order;
+                //判断如果订单状态为未支付 说明第一次收到消息  更新状态
+                $orderInfo=$order->findBySn($data->out_trade_no);
+                // var_dump($orderInfo);
+                // die;
+                 if($orderInfo['status']==0){
+                     //开启事务
+                       $order->startTrans();
+                     //更新订单状态
+                      $ret1=$order->setpaid($data->out_trade_no);
+                      //更新用户余额
+                      $user = new \models\User;
+                      $ret2=$user->addMoney($orderInfo['money'],$orderInfo['user_id']);
+                      if($ret1&&$ret2){
+                          //提交事务
+                          $order->commit();
+                      }else{
+                          //回滚
+                          $order->rollback();
+                      }
+                    }
+                //设置订单已支付状态
+               
+            }
+            // echo '订单ID：'.$data->out_trade_no ."\r\n";
+            // echo '支付总金额：'.$data->total_amount ."\r\n";
+            // echo '支付状态：'.$data->trade_status ."\r\n";
+            // echo '商户ID：'.$data->seller_id ."\r\n";
+            // echo 'app_id：'.$data->app_id ."\r\n";
         } catch (\Exception $e) {
             echo '失败：';
             var_dump($e->getMessage()) ;
@@ -92,4 +131,6 @@ class AlipayController
             var_dump( $e->getMessage() );
         }
     }
+
+   
 }
