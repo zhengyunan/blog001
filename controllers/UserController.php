@@ -173,7 +173,7 @@ class UserController{
 
         // 移动图片
         move_uploaded_file($_FILES['avatar']['tmp_name'],$root.$date.'/'.$name);
-        echo($root.$date.'/'.$name);
+        // echo($root.$date.'/'.$name);
     }
 
 
@@ -211,5 +211,45 @@ class UserController{
                 move_uploaded_file($_FILES['image']['tmp_name'][$k],$root.$date.'/'.$name);
                 echo($root.$date.'/'.$name).'<hr>';
         }
+    }
+
+    public function uploadbig(){
+        var_dump($_POST);
+        // var_dump($_FILES);
+        // die;
+        $count = $_POST['count'];
+        $i = $_POST['i'];
+        $size = $_POST['size'];
+        $name = 'big_img_'.$_POST['img_name']; //所有的分块名字
+        $img = $_FILES['img'];
+        // 保存每个分片
+        move_uploaded_file( $img['tmp_name'] , ROOT.'tmp/'.$i);
+
+        // 当最后一张图片上传完后合并
+
+        // 全部分片都上传完毕后在合并
+        // 把已经上传的先保存到redis中  
+        $redis = \libs\Redis::getInstance();
+        // 每上传一张图片+1
+        $uploadedCount = $redis->incr($name);
+        var_dump($uploadedCount);
+        // 如果是最后一个分支就合并
+        if($uploadedCount == $count){
+            // alert("qweqwe");
+            // 以追回的方式(a)创建并打开最终的大文件
+            $fp = fopen(ROOT.'public/uploads/big'.$name.'.png','a');
+            //循环所有分片
+            for($i=0;$i<$count;$i++){
+                // // 读取第 i 号文件并写到大文件中
+                fwrite($fp,file_get_contents(ROOT.'tmp/'.$i));
+                // 删除第 i 号临时文件
+                unlink(ROOT.'tmp/'.$i);
+            }
+            // 关闭文件
+            fclose($fp);
+              // 从 redis 中删除这个文件对应的编号这个变量
+              $redis->del($name);
+        }
+
     }
 }

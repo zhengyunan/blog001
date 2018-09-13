@@ -2,6 +2,8 @@
 namespace controllers;
 use PDO;
 use models\Blog;
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 class BlogController{
     public function delete(){
         $id = $_POST['id'];
@@ -113,5 +115,36 @@ class BlogController{
          view('blogs.content',[
              'blog'=>$blog,
          ]);
+    }
+
+
+    public function makeExcel(){
+         // 获取当前标签页
+        $spreadsheet = new Spreadsheet();
+        // 获取当前工作
+        $sheet = $spreadsheet->getActiveSheet();
+
+        // 设置第1行内容
+        $sheet->setCellValue('A1', '标题');
+        $sheet->setCellValue('B1', '内容');
+        $sheet->setCellValue('C1', '发表时间');
+        $sheet->setCellValue('D1', '是发公开');
+        // 获取最新的十个日志
+        $blog = new Blog;
+        $data=$blog->getNew();
+        $i=2;
+        // var_dump($data)
+        foreach($data as $v){
+            $sheet->setCellValue('A'.$i, $v['title']);
+            $sheet->setCellValue('B'.$i, $v['content']);
+            $sheet->setCellValue('C'.$i, $v['created_at']);
+            $sheet->setCellValue('D'.$i, $v['is_show']==1?'公开':'私有');
+            $i++;
+        }
+        $date = date('Ymd');
+         // 生成 Excel 文件
+        $writer = new Xlsx($spreadsheet);
+        // $writer->save(ROOT . 'excel/'.$date.'.xlsx');
+        $writer->save(ROOT . 'hello-world.xlsx');
     }
 }
