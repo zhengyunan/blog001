@@ -3,7 +3,7 @@ namespace libs;
 class Log{
     private $fp;
     public function __construct($fileName){
-        $this->fp = fopen(ROOT . 'logs/'.$fileName.'.log', 'a');
+        $this->fp = fopen(ROOT . 'storage/logs/'.$fileName.'.log', 'a');
         // var_dump($this->fp);
     }
 

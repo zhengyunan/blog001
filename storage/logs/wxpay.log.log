@@ -1,0 +1,1120 @@
+2018-09-12 14:53:57
+========================================================================================================================
+接收到微信的消息
+
+2018-09-12 14:53:57
+========================================================================================================================
+收到了数据是：<xml><appid><![CDATA[wx426b3015555a46be]]></appid>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[N]]></is_subscribe>
+<mch_id><![CDATA[1900009851]]></mch_id>
+<nonce_str><![CDATA[Bnh5TIQXa4Yza4lp]]></nonce_str>
+<openid><![CDATA[oHZx6uFs_k_uWf35fijLKZyW6itE]]></openid>
+<out_trade_no><![CDATA[259083727336894464]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[A5BFDBF001098F4EE97C134151DE133F]]></sign>
+<time_end><![CDATA[20180912225355]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<transaction_id><![CDATA[4200000174201809123501476483]]></transaction_id>
+</xml>
+
+2018-09-12 14:53:57
+========================================================================================================================
+支付成功，金额1订单号259083727336894464
+
+2018-09-12 14:54:14
+========================================================================================================================
+接收到微信的消息
+
+2018-09-12 14:54:14
+========================================================================================================================
+收到了数据是：<xml><appid><![CDATA[wx426b3015555a46be]]></appid>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[N]]></is_subscribe>
+<mch_id><![CDATA[1900009851]]></mch_id>
+<nonce_str><![CDATA[Bnh5TIQXa4Yza4lp]]></nonce_str>
+<openid><![CDATA[oHZx6uFs_k_uWf35fijLKZyW6itE]]></openid>
+<out_trade_no><![CDATA[259083727336894464]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[A5BFDBF001098F4EE97C134151DE133F]]></sign>
+<time_end><![CDATA[20180912225355]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<transaction_id><![CDATA[4200000174201809123501476483]]></transaction_id>
+</xml>
+
+2018-09-12 14:54:14
+========================================================================================================================
+支付成功，金额1订单号259083727336894464
+
+2018-09-12 14:54:30
+========================================================================================================================
+接收到微信的消息
+
+2018-09-12 14:54:30
+========================================================================================================================
+收到了数据是：<xml><appid><![CDATA[wx426b3015555a46be]]></appid>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[N]]></is_subscribe>
+<mch_id><![CDATA[1900009851]]></mch_id>
+<nonce_str><![CDATA[Bnh5TIQXa4Yza4lp]]></nonce_str>
+<openid><![CDATA[oHZx6uFs_k_uWf35fijLKZyW6itE]]></openid>
+<out_trade_no><![CDATA[259083727336894464]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[A5BFDBF001098F4EE97C134151DE133F]]></sign>
+<time_end><![CDATA[20180912225355]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<transaction_id><![CDATA[4200000174201809123501476483]]></transaction_id>
+</xml>
+
+2018-09-12 14:54:30
+========================================================================================================================
+支付成功，金额1订单号259083727336894464
+
+2018-09-12 14:55:01
+========================================================================================================================
+接收到微信的消息
+
+2018-09-12 14:55:01
+========================================================================================================================
+收到了数据是：<xml><appid><![CDATA[wx426b3015555a46be]]></appid>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[N]]></is_subscribe>
+<mch_id><![CDATA[1900009851]]></mch_id>
+<nonce_str><![CDATA[Bnh5TIQXa4Yza4lp]]></nonce_str>
+<openid><![CDATA[oHZx6uFs_k_uWf35fijLKZyW6itE]]></openid>
+<out_trade_no><![CDATA[259083727336894464]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[A5BFDBF001098F4EE97C134151DE133F]]></sign>
+<time_end><![CDATA[20180912225355]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<transaction_id><![CDATA[4200000174201809123501476483]]></transaction_id>
+</xml>
+
+2018-09-12 14:55:01
+========================================================================================================================
+支付成功，金额1订单号259083727336894464
+
+2018-09-12 14:58:04
+========================================================================================================================
+接收到微信的消息
+
+2018-09-12 14:58:04
+========================================================================================================================
+收到了数据是：<xml><appid><![CDATA[wx426b3015555a46be]]></appid>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[N]]></is_subscribe>
+<mch_id><![CDATA[1900009851]]></mch_id>
+<nonce_str><![CDATA[Bnh5TIQXa4Yza4lp]]></nonce_str>
+<openid><![CDATA[oHZx6uFs_k_uWf35fijLKZyW6itE]]></openid>
+<out_trade_no><![CDATA[259083727336894464]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[A5BFDBF001098F4EE97C134151DE133F]]></sign>
+<time_end><![CDATA[20180912225355]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<transaction_id><![CDATA[4200000174201809123501476483]]></transaction_id>
+</xml>
+
+2018-09-12 14:58:04
+========================================================================================================================
+支付成功，金额1订单号259083727336894464
+
+2018-09-12 15:04:53
+========================================================================================================================
+接收到微信的消息
+
+2018-09-12 15:04:53
+========================================================================================================================
+收到了数据是：<xml><appid><![CDATA[wx426b3015555a46be]]></appid>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[N]]></is_subscribe>
+<mch_id><![CDATA[1900009851]]></mch_id>
+<nonce_str><![CDATA[P3osTymBa5HAl5sv]]></nonce_str>
+<openid><![CDATA[oHZx6uFs_k_uWf35fijLKZyW6itE]]></openid>
+<out_trade_no><![CDATA[259093344141963264]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[693C802EA580D62BA205826769B85775]]></sign>
+<time_end><![CDATA[20180912230451]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<transaction_id><![CDATA[4200000160201809121122615227]]></transaction_id>
+</xml>
+
+2018-09-12 15:04:53
+========================================================================================================================
+支付成功，金额1订单号259093344141963264
+
+2018-09-12 15:05:08
+========================================================================================================================
+接收到微信的消息
+
+2018-09-12 15:05:08
+========================================================================================================================
+收到了数据是：<xml><appid><![CDATA[wx426b3015555a46be]]></appid>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[N]]></is_subscribe>
+<mch_id><![CDATA[1900009851]]></mch_id>
+<nonce_str><![CDATA[P3osTymBa5HAl5sv]]></nonce_str>
+<openid><![CDATA[oHZx6uFs_k_uWf35fijLKZyW6itE]]></openid>
+<out_trade_no><![CDATA[259093344141963264]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[693C802EA580D62BA205826769B85775]]></sign>
+<time_end><![CDATA[20180912230451]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<transaction_id><![CDATA[4200000160201809121122615227]]></transaction_id>
+</xml>
+
+2018-09-12 15:05:08
+========================================================================================================================
+支付成功，金额1订单号259093344141963264
+
+2018-09-12 15:05:24
+========================================================================================================================
+接收到微信的消息
+
+2018-09-12 15:05:24
+========================================================================================================================
+收到了数据是：<xml><appid><![CDATA[wx426b3015555a46be]]></appid>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[N]]></is_subscribe>
+<mch_id><![CDATA[1900009851]]></mch_id>
+<nonce_str><![CDATA[P3osTymBa5HAl5sv]]></nonce_str>
+<openid><![CDATA[oHZx6uFs_k_uWf35fijLKZyW6itE]]></openid>
+<out_trade_no><![CDATA[259093344141963264]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[693C802EA580D62BA205826769B85775]]></sign>
+<time_end><![CDATA[20180912230451]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<transaction_id><![CDATA[4200000160201809121122615227]]></transaction_id>
+</xml>
+
+2018-09-12 15:05:24
+========================================================================================================================
+支付成功，金额1订单号259093344141963264
+
+2018-09-12 15:05:55
+========================================================================================================================
+接收到微信的消息
+
+2018-09-12 15:05:55
+========================================================================================================================
+收到了数据是：<xml><appid><![CDATA[wx426b3015555a46be]]></appid>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[N]]></is_subscribe>
+<mch_id><![CDATA[1900009851]]></mch_id>
+<nonce_str><![CDATA[P3osTymBa5HAl5sv]]></nonce_str>
+<openid><![CDATA[oHZx6uFs_k_uWf35fijLKZyW6itE]]></openid>
+<out_trade_no><![CDATA[259093344141963264]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[693C802EA580D62BA205826769B85775]]></sign>
+<time_end><![CDATA[20180912230451]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<transaction_id><![CDATA[4200000160201809121122615227]]></transaction_id>
+</xml>
+
+2018-09-12 15:05:55
+========================================================================================================================
+支付成功，金额1订单号259093344141963264
+
+2018-09-12 15:08:57
+========================================================================================================================
+接收到微信的消息
+
+2018-09-12 15:08:57
+========================================================================================================================
+收到了数据是：<xml><appid><![CDATA[wx426b3015555a46be]]></appid>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[N]]></is_subscribe>
+<mch_id><![CDATA[1900009851]]></mch_id>
+<nonce_str><![CDATA[P3osTymBa5HAl5sv]]></nonce_str>
+<openid><![CDATA[oHZx6uFs_k_uWf35fijLKZyW6itE]]></openid>
+<out_trade_no><![CDATA[259093344141963264]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[693C802EA580D62BA205826769B85775]]></sign>
+<time_end><![CDATA[20180912230451]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<transaction_id><![CDATA[4200000160201809121122615227]]></transaction_id>
+</xml>
+
+2018-09-12 15:08:57
+========================================================================================================================
+支付成功，金额1订单号259093344141963264
+
+2018-09-12 15:28:05
+========================================================================================================================
+接收到微信的消息
+
+2018-09-12 15:28:06
+========================================================================================================================
+收到了数据是：<xml><appid><![CDATA[wx426b3015555a46be]]></appid>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[N]]></is_subscribe>
+<mch_id><![CDATA[1900009851]]></mch_id>
+<nonce_str><![CDATA[Bnh5TIQXa4Yza4lp]]></nonce_str>
+<openid><![CDATA[oHZx6uFs_k_uWf35fijLKZyW6itE]]></openid>
+<out_trade_no><![CDATA[259083727336894464]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[A5BFDBF001098F4EE97C134151DE133F]]></sign>
+<time_end><![CDATA[20180912225355]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<transaction_id><![CDATA[4200000174201809123501476483]]></transaction_id>
+</xml>
+
+2018-09-12 15:28:06
+========================================================================================================================
+支付成功，金额1订单号259083727336894464
+
+2018-09-12 15:38:59
+========================================================================================================================
+接收到微信的消息
+
+2018-09-12 15:38:59
+========================================================================================================================
+收到了数据是：<xml><appid><![CDATA[wx426b3015555a46be]]></appid>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[N]]></is_subscribe>
+<mch_id><![CDATA[1900009851]]></mch_id>
+<nonce_str><![CDATA[P3osTymBa5HAl5sv]]></nonce_str>
+<openid><![CDATA[oHZx6uFs_k_uWf35fijLKZyW6itE]]></openid>
+<out_trade_no><![CDATA[259093344141963264]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[693C802EA580D62BA205826769B85775]]></sign>
+<time_end><![CDATA[20180912230451]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<transaction_id><![CDATA[4200000160201809121122615227]]></transaction_id>
+</xml>
+
+2018-09-12 15:38:59
+========================================================================================================================
+支付成功，金额1订单号259093344141963264
+
+2018-09-13 07:22:29
+========================================================================================================================
+接收到微信的消息
+
+2018-09-13 07:22:29
+========================================================================================================================
+收到了数据是：<xml><appid><![CDATA[wx426b3015555a46be]]></appid>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[N]]></is_subscribe>
+<mch_id><![CDATA[1900009851]]></mch_id>
+<nonce_str><![CDATA[vhiwOu6wG4pu5xsM]]></nonce_str>
+<openid><![CDATA[oHZx6uFs_k_uWf35fijLKZyW6itE]]></openid>
+<out_trade_no><![CDATA[259083611674767360]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[AF135ED08A9DC176245BA867FA3AF5C8]]></sign>
+<time_end><![CDATA[20180913152228]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<transaction_id><![CDATA[4200000177201809130779700371]]></transaction_id>
+</xml>
+
+2018-09-13 07:22:29
+========================================================================================================================
+支付成功，金额1订单号259083611674767360
+
+2018-09-13 07:22:45
+========================================================================================================================
+接收到微信的消息
+
+2018-09-13 07:22:45
+========================================================================================================================
+收到了数据是：<xml><appid><![CDATA[wx426b3015555a46be]]></appid>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[N]]></is_subscribe>
+<mch_id><![CDATA[1900009851]]></mch_id>
+<nonce_str><![CDATA[vhiwOu6wG4pu5xsM]]></nonce_str>
+<openid><![CDATA[oHZx6uFs_k_uWf35fijLKZyW6itE]]></openid>
+<out_trade_no><![CDATA[259083611674767360]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[AF135ED08A9DC176245BA867FA3AF5C8]]></sign>
+<time_end><![CDATA[20180913152228]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<transaction_id><![CDATA[4200000177201809130779700371]]></transaction_id>
+</xml>
+
+2018-09-13 07:22:45
+========================================================================================================================
+支付成功，金额1订单号259083611674767360
+
+2018-09-13 07:23:00
+========================================================================================================================
+接收到微信的消息
+
+2018-09-13 07:23:00
+========================================================================================================================
+收到了数据是：<xml><appid><![CDATA[wx426b3015555a46be]]></appid>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[N]]></is_subscribe>
+<mch_id><![CDATA[1900009851]]></mch_id>
+<nonce_str><![CDATA[vhiwOu6wG4pu5xsM]]></nonce_str>
+<openid><![CDATA[oHZx6uFs_k_uWf35fijLKZyW6itE]]></openid>
+<out_trade_no><![CDATA[259083611674767360]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[AF135ED08A9DC176245BA867FA3AF5C8]]></sign>
+<time_end><![CDATA[20180913152228]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<transaction_id><![CDATA[4200000177201809130779700371]]></transaction_id>
+</xml>
+
+2018-09-13 07:23:00
+========================================================================================================================
+支付成功，金额1订单号259083611674767360
+
+2018-09-13 07:23:31
+========================================================================================================================
+接收到微信的消息
+
+2018-09-13 07:23:31
+========================================================================================================================
+收到了数据是：<xml><appid><![CDATA[wx426b3015555a46be]]></appid>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[N]]></is_subscribe>
+<mch_id><![CDATA[1900009851]]></mch_id>
+<nonce_str><![CDATA[vhiwOu6wG4pu5xsM]]></nonce_str>
+<openid><![CDATA[oHZx6uFs_k_uWf35fijLKZyW6itE]]></openid>
+<out_trade_no><![CDATA[259083611674767360]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[AF135ED08A9DC176245BA867FA3AF5C8]]></sign>
+<time_end><![CDATA[20180913152228]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<transaction_id><![CDATA[4200000177201809130779700371]]></transaction_id>
+</xml>
+
+2018-09-13 07:23:31
+========================================================================================================================
+支付成功，金额1订单号259083611674767360
+
+2018-09-13 07:26:32
+========================================================================================================================
+接收到微信的消息
+
+2018-09-13 07:26:32
+========================================================================================================================
+收到了数据是：<xml><appid><![CDATA[wx426b3015555a46be]]></appid>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[N]]></is_subscribe>
+<mch_id><![CDATA[1900009851]]></mch_id>
+<nonce_str><![CDATA[vhiwOu6wG4pu5xsM]]></nonce_str>
+<openid><![CDATA[oHZx6uFs_k_uWf35fijLKZyW6itE]]></openid>
+<out_trade_no><![CDATA[259083611674767360]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[AF135ED08A9DC176245BA867FA3AF5C8]]></sign>
+<time_end><![CDATA[20180913152228]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<transaction_id><![CDATA[4200000177201809130779700371]]></transaction_id>
+</xml>
+
+2018-09-13 07:26:32
+========================================================================================================================
+支付成功，金额1订单号259083611674767360
+
+2018-09-13 07:35:12
+========================================================================================================================
+接收到微信的消息
+
+2018-09-13 07:35:12
+========================================================================================================================
+收到了数据是：<xml><appid><![CDATA[wx426b3015555a46be]]></appid>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[N]]></is_subscribe>
+<mch_id><![CDATA[1900009851]]></mch_id>
+<nonce_str><![CDATA[ARNdgRFz345bxvbR]]></nonce_str>
+<openid><![CDATA[oHZx6uFs_k_uWf35fijLKZyW6itE]]></openid>
+<out_trade_no><![CDATA[259082095274487808]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[03B2406CCA6EB5A4BEB75508D7147DB0]]></sign>
+<time_end><![CDATA[20180913153510]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<transaction_id><![CDATA[4200000180201809138186395593]]></transaction_id>
+</xml>
+
+2018-09-13 07:35:12
+========================================================================================================================
+支付成功，金额1订单号259082095274487808
+
+2018-09-13 07:35:28
+========================================================================================================================
+接收到微信的消息
+
+2018-09-13 07:35:28
+========================================================================================================================
+收到了数据是：<xml><appid><![CDATA[wx426b3015555a46be]]></appid>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[N]]></is_subscribe>
+<mch_id><![CDATA[1900009851]]></mch_id>
+<nonce_str><![CDATA[ARNdgRFz345bxvbR]]></nonce_str>
+<openid><![CDATA[oHZx6uFs_k_uWf35fijLKZyW6itE]]></openid>
+<out_trade_no><![CDATA[259082095274487808]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[03B2406CCA6EB5A4BEB75508D7147DB0]]></sign>
+<time_end><![CDATA[20180913153510]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<transaction_id><![CDATA[4200000180201809138186395593]]></transaction_id>
+</xml>
+
+2018-09-13 07:35:28
+========================================================================================================================
+支付成功，金额1订单号259082095274487808
+
+2018-09-13 07:35:44
+========================================================================================================================
+接收到微信的消息
+
+2018-09-13 07:35:44
+========================================================================================================================
+收到了数据是：<xml><appid><![CDATA[wx426b3015555a46be]]></appid>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[N]]></is_subscribe>
+<mch_id><![CDATA[1900009851]]></mch_id>
+<nonce_str><![CDATA[ARNdgRFz345bxvbR]]></nonce_str>
+<openid><![CDATA[oHZx6uFs_k_uWf35fijLKZyW6itE]]></openid>
+<out_trade_no><![CDATA[259082095274487808]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[03B2406CCA6EB5A4BEB75508D7147DB0]]></sign>
+<time_end><![CDATA[20180913153510]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<transaction_id><![CDATA[4200000180201809138186395593]]></transaction_id>
+</xml>
+
+2018-09-13 07:35:44
+========================================================================================================================
+支付成功，金额1订单号259082095274487808
+
+2018-09-13 07:36:15
+========================================================================================================================
+接收到微信的消息
+
+2018-09-13 07:36:15
+========================================================================================================================
+收到了数据是：<xml><appid><![CDATA[wx426b3015555a46be]]></appid>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[N]]></is_subscribe>
+<mch_id><![CDATA[1900009851]]></mch_id>
+<nonce_str><![CDATA[ARNdgRFz345bxvbR]]></nonce_str>
+<openid><![CDATA[oHZx6uFs_k_uWf35fijLKZyW6itE]]></openid>
+<out_trade_no><![CDATA[259082095274487808]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[03B2406CCA6EB5A4BEB75508D7147DB0]]></sign>
+<time_end><![CDATA[20180913153510]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<transaction_id><![CDATA[4200000180201809138186395593]]></transaction_id>
+</xml>
+
+2018-09-13 07:36:15
+========================================================================================================================
+支付成功，金额1订单号259082095274487808
+
+2018-09-13 07:39:16
+========================================================================================================================
+接收到微信的消息
+
+2018-09-13 07:39:16
+========================================================================================================================
+收到了数据是：<xml><appid><![CDATA[wx426b3015555a46be]]></appid>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[N]]></is_subscribe>
+<mch_id><![CDATA[1900009851]]></mch_id>
+<nonce_str><![CDATA[ARNdgRFz345bxvbR]]></nonce_str>
+<openid><![CDATA[oHZx6uFs_k_uWf35fijLKZyW6itE]]></openid>
+<out_trade_no><![CDATA[259082095274487808]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[03B2406CCA6EB5A4BEB75508D7147DB0]]></sign>
+<time_end><![CDATA[20180913153510]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<transaction_id><![CDATA[4200000180201809138186395593]]></transaction_id>
+</xml>
+
+2018-09-13 07:39:16
+========================================================================================================================
+支付成功，金额1订单号259082095274487808
+
+2018-09-13 07:44:43
+========================================================================================================================
+接收到微信的消息
+
+2018-09-13 07:44:43
+========================================================================================================================
+收到了数据是：<xml><appid><![CDATA[wx426b3015555a46be]]></appid>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[N]]></is_subscribe>
+<mch_id><![CDATA[1900009851]]></mch_id>
+<nonce_str><![CDATA[0b08pEsk1P2GNLJi]]></nonce_str>
+<openid><![CDATA[oHZx6uFs_k_uWf35fijLKZyW6itE]]></openid>
+<out_trade_no><![CDATA[259344930458038272]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[4E9EB876DF38ACA03A2B4186E67725A6]]></sign>
+<time_end><![CDATA[20180913154442]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<transaction_id><![CDATA[4200000174201809139137569563]]></transaction_id>
+</xml>
+
+2018-09-13 07:44:43
+========================================================================================================================
+支付成功，金额1订单号259344930458038272
+
+2018-09-13 07:44:59
+========================================================================================================================
+接收到微信的消息
+
+2018-09-13 07:44:59
+========================================================================================================================
+收到了数据是：<xml><appid><![CDATA[wx426b3015555a46be]]></appid>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[N]]></is_subscribe>
+<mch_id><![CDATA[1900009851]]></mch_id>
+<nonce_str><![CDATA[0b08pEsk1P2GNLJi]]></nonce_str>
+<openid><![CDATA[oHZx6uFs_k_uWf35fijLKZyW6itE]]></openid>
+<out_trade_no><![CDATA[259344930458038272]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[4E9EB876DF38ACA03A2B4186E67725A6]]></sign>
+<time_end><![CDATA[20180913154442]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<transaction_id><![CDATA[4200000174201809139137569563]]></transaction_id>
+</xml>
+
+2018-09-13 07:44:59
+========================================================================================================================
+支付成功，金额1订单号259344930458038272
+
+2018-09-13 07:45:15
+========================================================================================================================
+接收到微信的消息
+
+2018-09-13 07:45:15
+========================================================================================================================
+收到了数据是：<xml><appid><![CDATA[wx426b3015555a46be]]></appid>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[N]]></is_subscribe>
+<mch_id><![CDATA[1900009851]]></mch_id>
+<nonce_str><![CDATA[0b08pEsk1P2GNLJi]]></nonce_str>
+<openid><![CDATA[oHZx6uFs_k_uWf35fijLKZyW6itE]]></openid>
+<out_trade_no><![CDATA[259344930458038272]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[4E9EB876DF38ACA03A2B4186E67725A6]]></sign>
+<time_end><![CDATA[20180913154442]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<transaction_id><![CDATA[4200000174201809139137569563]]></transaction_id>
+</xml>
+
+2018-09-13 07:45:15
+========================================================================================================================
+支付成功，金额1订单号259344930458038272
+
+2018-09-13 07:45:45
+========================================================================================================================
+接收到微信的消息
+
+2018-09-13 07:45:45
+========================================================================================================================
+收到了数据是：<xml><appid><![CDATA[wx426b3015555a46be]]></appid>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[N]]></is_subscribe>
+<mch_id><![CDATA[1900009851]]></mch_id>
+<nonce_str><![CDATA[0b08pEsk1P2GNLJi]]></nonce_str>
+<openid><![CDATA[oHZx6uFs_k_uWf35fijLKZyW6itE]]></openid>
+<out_trade_no><![CDATA[259344930458038272]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[4E9EB876DF38ACA03A2B4186E67725A6]]></sign>
+<time_end><![CDATA[20180913154442]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<transaction_id><![CDATA[4200000174201809139137569563]]></transaction_id>
+</xml>
+
+2018-09-13 07:45:45
+========================================================================================================================
+支付成功，金额1订单号259344930458038272
+
+2018-09-13 07:48:46
+========================================================================================================================
+接收到微信的消息
+
+2018-09-13 07:48:46
+========================================================================================================================
+收到了数据是：<xml><appid><![CDATA[wx426b3015555a46be]]></appid>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[N]]></is_subscribe>
+<mch_id><![CDATA[1900009851]]></mch_id>
+<nonce_str><![CDATA[0b08pEsk1P2GNLJi]]></nonce_str>
+<openid><![CDATA[oHZx6uFs_k_uWf35fijLKZyW6itE]]></openid>
+<out_trade_no><![CDATA[259344930458038272]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[4E9EB876DF38ACA03A2B4186E67725A6]]></sign>
+<time_end><![CDATA[20180913154442]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<transaction_id><![CDATA[4200000174201809139137569563]]></transaction_id>
+</xml>
+
+2018-09-13 07:48:46
+========================================================================================================================
+支付成功，金额1订单号259344930458038272
+
+2018-09-13 07:56:34
+========================================================================================================================
+接收到微信的消息
+
+2018-09-13 07:56:34
+========================================================================================================================
+收到了数据是：<xml><appid><![CDATA[wx426b3015555a46be]]></appid>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[N]]></is_subscribe>
+<mch_id><![CDATA[1900009851]]></mch_id>
+<nonce_str><![CDATA[vhiwOu6wG4pu5xsM]]></nonce_str>
+<openid><![CDATA[oHZx6uFs_k_uWf35fijLKZyW6itE]]></openid>
+<out_trade_no><![CDATA[259083611674767360]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[AF135ED08A9DC176245BA867FA3AF5C8]]></sign>
+<time_end><![CDATA[20180913152228]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<transaction_id><![CDATA[4200000177201809130779700371]]></transaction_id>
+</xml>
+
+2018-09-13 07:56:34
+========================================================================================================================
+支付成功，金额1订单号259083611674767360
+
+2018-09-13 07:58:57
+========================================================================================================================
+接收到微信的消息
+
+2018-09-13 07:58:57
+========================================================================================================================
+收到了数据是：<xml><appid><![CDATA[wx426b3015555a46be]]></appid>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[N]]></is_subscribe>
+<mch_id><![CDATA[1900009851]]></mch_id>
+<nonce_str><![CDATA[OdBPiaNpWYosj2mX]]></nonce_str>
+<openid><![CDATA[oHZx6uFs_k_uWf35fijLKZyW6itE]]></openid>
+<out_trade_no><![CDATA[259348575484375040]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[AD497AEC063799074C9671C10246AA61]]></sign>
+<time_end><![CDATA[20180913155856]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<transaction_id><![CDATA[4200000167201809133117453826]]></transaction_id>
+</xml>
+
+2018-09-13 07:58:57
+========================================================================================================================
+支付成功，金额1订单号259348575484375040
+
+2018-09-13 07:59:13
+========================================================================================================================
+接收到微信的消息
+
+2018-09-13 07:59:13
+========================================================================================================================
+收到了数据是：<xml><appid><![CDATA[wx426b3015555a46be]]></appid>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[N]]></is_subscribe>
+<mch_id><![CDATA[1900009851]]></mch_id>
+<nonce_str><![CDATA[OdBPiaNpWYosj2mX]]></nonce_str>
+<openid><![CDATA[oHZx6uFs_k_uWf35fijLKZyW6itE]]></openid>
+<out_trade_no><![CDATA[259348575484375040]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[AD497AEC063799074C9671C10246AA61]]></sign>
+<time_end><![CDATA[20180913155856]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<transaction_id><![CDATA[4200000167201809133117453826]]></transaction_id>
+</xml>
+
+2018-09-13 07:59:13
+========================================================================================================================
+支付成功，金额1订单号259348575484375040
+
+2018-09-13 07:59:29
+========================================================================================================================
+接收到微信的消息
+
+2018-09-13 07:59:29
+========================================================================================================================
+收到了数据是：<xml><appid><![CDATA[wx426b3015555a46be]]></appid>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[N]]></is_subscribe>
+<mch_id><![CDATA[1900009851]]></mch_id>
+<nonce_str><![CDATA[OdBPiaNpWYosj2mX]]></nonce_str>
+<openid><![CDATA[oHZx6uFs_k_uWf35fijLKZyW6itE]]></openid>
+<out_trade_no><![CDATA[259348575484375040]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[AD497AEC063799074C9671C10246AA61]]></sign>
+<time_end><![CDATA[20180913155856]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<transaction_id><![CDATA[4200000167201809133117453826]]></transaction_id>
+</xml>
+
+2018-09-13 07:59:29
+========================================================================================================================
+支付成功，金额1订单号259348575484375040
+
+2018-09-13 08:00:00
+========================================================================================================================
+接收到微信的消息
+
+2018-09-13 08:00:00
+========================================================================================================================
+收到了数据是：<xml><appid><![CDATA[wx426b3015555a46be]]></appid>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[N]]></is_subscribe>
+<mch_id><![CDATA[1900009851]]></mch_id>
+<nonce_str><![CDATA[OdBPiaNpWYosj2mX]]></nonce_str>
+<openid><![CDATA[oHZx6uFs_k_uWf35fijLKZyW6itE]]></openid>
+<out_trade_no><![CDATA[259348575484375040]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[AD497AEC063799074C9671C10246AA61]]></sign>
+<time_end><![CDATA[20180913155856]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<transaction_id><![CDATA[4200000167201809133117453826]]></transaction_id>
+</xml>
+
+2018-09-13 08:00:00
+========================================================================================================================
+支付成功，金额1订单号259348575484375040
+
+2018-09-13 08:03:01
+========================================================================================================================
+接收到微信的消息
+
+2018-09-13 08:03:01
+========================================================================================================================
+收到了数据是：<xml><appid><![CDATA[wx426b3015555a46be]]></appid>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[N]]></is_subscribe>
+<mch_id><![CDATA[1900009851]]></mch_id>
+<nonce_str><![CDATA[OdBPiaNpWYosj2mX]]></nonce_str>
+<openid><![CDATA[oHZx6uFs_k_uWf35fijLKZyW6itE]]></openid>
+<out_trade_no><![CDATA[259348575484375040]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[AD497AEC063799074C9671C10246AA61]]></sign>
+<time_end><![CDATA[20180913155856]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<transaction_id><![CDATA[4200000167201809133117453826]]></transaction_id>
+</xml>
+
+2018-09-13 08:03:01
+========================================================================================================================
+支付成功，金额1订单号259348575484375040
+
+2018-09-13 08:09:18
+========================================================================================================================
+接收到微信的消息
+
+2018-09-13 08:09:18
+========================================================================================================================
+收到了数据是：<xml><appid><![CDATA[wx426b3015555a46be]]></appid>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[N]]></is_subscribe>
+<mch_id><![CDATA[1900009851]]></mch_id>
+<nonce_str><![CDATA[ARNdgRFz345bxvbR]]></nonce_str>
+<openid><![CDATA[oHZx6uFs_k_uWf35fijLKZyW6itE]]></openid>
+<out_trade_no><![CDATA[259082095274487808]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[03B2406CCA6EB5A4BEB75508D7147DB0]]></sign>
+<time_end><![CDATA[20180913153510]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<transaction_id><![CDATA[4200000180201809138186395593]]></transaction_id>
+</xml>
+
+2018-09-13 08:09:18
+========================================================================================================================
+支付成功，金额1订单号259082095274487808
+
+2018-09-13 08:18:47
+========================================================================================================================
+接收到微信的消息
+
+2018-09-13 08:18:47
+========================================================================================================================
+收到了数据是：<xml><appid><![CDATA[wx426b3015555a46be]]></appid>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[N]]></is_subscribe>
+<mch_id><![CDATA[1900009851]]></mch_id>
+<nonce_str><![CDATA[0b08pEsk1P2GNLJi]]></nonce_str>
+<openid><![CDATA[oHZx6uFs_k_uWf35fijLKZyW6itE]]></openid>
+<out_trade_no><![CDATA[259344930458038272]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[4E9EB876DF38ACA03A2B4186E67725A6]]></sign>
+<time_end><![CDATA[20180913154442]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<transaction_id><![CDATA[4200000174201809139137569563]]></transaction_id>
+</xml>
+
+2018-09-13 08:18:47
+========================================================================================================================
+支付成功，金额1订单号259344930458038272
+
+2018-09-13 08:26:36
+========================================================================================================================
+接收到微信的消息
+
+2018-09-13 08:26:36
+========================================================================================================================
+收到了数据是：<xml><appid><![CDATA[wx426b3015555a46be]]></appid>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[N]]></is_subscribe>
+<mch_id><![CDATA[1900009851]]></mch_id>
+<nonce_str><![CDATA[vhiwOu6wG4pu5xsM]]></nonce_str>
+<openid><![CDATA[oHZx6uFs_k_uWf35fijLKZyW6itE]]></openid>
+<out_trade_no><![CDATA[259083611674767360]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[AF135ED08A9DC176245BA867FA3AF5C8]]></sign>
+<time_end><![CDATA[20180913152228]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<transaction_id><![CDATA[4200000177201809130779700371]]></transaction_id>
+</xml>
+
+2018-09-13 08:26:36
+========================================================================================================================
+支付成功，金额1订单号259083611674767360
+
+2018-09-13 08:33:02
+========================================================================================================================
+接收到微信的消息
+
+2018-09-13 08:33:02
+========================================================================================================================
+收到了数据是：<xml><appid><![CDATA[wx426b3015555a46be]]></appid>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[N]]></is_subscribe>
+<mch_id><![CDATA[1900009851]]></mch_id>
+<nonce_str><![CDATA[OdBPiaNpWYosj2mX]]></nonce_str>
+<openid><![CDATA[oHZx6uFs_k_uWf35fijLKZyW6itE]]></openid>
+<out_trade_no><![CDATA[259348575484375040]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[AD497AEC063799074C9671C10246AA61]]></sign>
+<time_end><![CDATA[20180913155856]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<transaction_id><![CDATA[4200000167201809133117453826]]></transaction_id>
+</xml>
+
+2018-09-13 08:33:02
+========================================================================================================================
+支付成功，金额1订单号259348575484375040
+
+2018-09-13 08:39:19
+========================================================================================================================
+接收到微信的消息
+
+2018-09-13 08:39:19
+========================================================================================================================
+收到了数据是：<xml><appid><![CDATA[wx426b3015555a46be]]></appid>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[N]]></is_subscribe>
+<mch_id><![CDATA[1900009851]]></mch_id>
+<nonce_str><![CDATA[ARNdgRFz345bxvbR]]></nonce_str>
+<openid><![CDATA[oHZx6uFs_k_uWf35fijLKZyW6itE]]></openid>
+<out_trade_no><![CDATA[259082095274487808]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[03B2406CCA6EB5A4BEB75508D7147DB0]]></sign>
+<time_end><![CDATA[20180913153510]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<transaction_id><![CDATA[4200000180201809138186395593]]></transaction_id>
+</xml>
+
+2018-09-13 08:39:19
+========================================================================================================================
+支付成功，金额1订单号259082095274487808
+
+2018-09-13 08:48:49
+========================================================================================================================
+接收到微信的消息
+
+2018-09-13 08:48:49
+========================================================================================================================
+收到了数据是：<xml><appid><![CDATA[wx426b3015555a46be]]></appid>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[N]]></is_subscribe>
+<mch_id><![CDATA[1900009851]]></mch_id>
+<nonce_str><![CDATA[0b08pEsk1P2GNLJi]]></nonce_str>
+<openid><![CDATA[oHZx6uFs_k_uWf35fijLKZyW6itE]]></openid>
+<out_trade_no><![CDATA[259344930458038272]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[4E9EB876DF38ACA03A2B4186E67725A6]]></sign>
+<time_end><![CDATA[20180913154442]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<transaction_id><![CDATA[4200000174201809139137569563]]></transaction_id>
+</xml>
+
+2018-09-13 08:48:49
+========================================================================================================================
+支付成功，金额1订单号259344930458038272
+
+2018-09-13 08:56:38
+========================================================================================================================
+接收到微信的消息
+
+2018-09-13 08:56:38
+========================================================================================================================
+收到了数据是：<xml><appid><![CDATA[wx426b3015555a46be]]></appid>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[N]]></is_subscribe>
+<mch_id><![CDATA[1900009851]]></mch_id>
+<nonce_str><![CDATA[vhiwOu6wG4pu5xsM]]></nonce_str>
+<openid><![CDATA[oHZx6uFs_k_uWf35fijLKZyW6itE]]></openid>
+<out_trade_no><![CDATA[259083611674767360]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[AF135ED08A9DC176245BA867FA3AF5C8]]></sign>
+<time_end><![CDATA[20180913152228]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<transaction_id><![CDATA[4200000177201809130779700371]]></transaction_id>
+</xml>
+
+2018-09-13 08:56:38
+========================================================================================================================
+支付成功，金额1订单号259083611674767360
+

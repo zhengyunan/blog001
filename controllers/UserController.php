@@ -122,8 +122,94 @@ class UserController{
         // var_dump($data);
         view('users.order',$data);
     }
-    public function money(){
+    public function money()
+    {
         $user = new User;
         echo $user->getMoney();
+    }
+    public function orderStatus(){
+        $sn = $_GET['sn'];
+        // 获取的次数
+        $try = 10;
+        $order = new \models\Order;
+        do{
+           $info=$order->findBySn($sn);
+           if($info['status']==0){
+               sleep(1);
+               $try--;
+           }else break;
+           
+        }while($try>0); //如果尝试的次数大于制定的次数
+           echo $info['status'];
+        
+    }
+
+
+    // 设置头像
+    public function avatar(){
+        view('users.avatar');
+    }
+
+    public function setavatar(){
+        //先创建目录
+        $root = ROOT.'public/uploads/';
+        //今天的日期目录
+        $date = date('Ymd');
+        if(!is_dir($root.$date)){
+            mkdir($root.$date,0777);
+            
+        }
+
+        // 生成唯一文件名
+        $name = md5(time().rand(1,9999));//32位字符串
+        
+        // 补上文件后缀
+        // 先取出原来后缀名字
+        // $ext = strrchr( $_FILES['image']['name'] , '.'); 
+        $str=strrchr($_FILES['avatar']['name'],'.');
+        // 全名
+        $name = $name.$str;
+        // var_dump($name);
+
+        // 移动图片
+        move_uploaded_file($_FILES['avatar']['tmp_name'],$root.$date.'/'.$name);
+        echo($root.$date.'/'.$name);
+    }
+
+
+    //上传多张图片
+    public function album(){
+        view('users.album');
+    }
+    public function uploadall(){
+        // echo '<pre>';
+        // var_dump($_FILES);
+
+         //先创建目录
+         $root = ROOT.'public/uploads/';
+         //今天的日期目录
+         $date = date('Ymd');
+         if(!is_dir($root.$date)){
+             mkdir($root.$date,0777);
+             
+         }
+         // 生成唯一文件名
+        // $name = md5(time().rand(1,9999));//32位字符串
+        foreach($_FILES['image']['name'] as $k=>$v){
+                // 生成唯一文件名
+                $name = md5(time().rand(1,9999));//32位字符串
+                
+                // 补上文件后缀
+                // 先取出原来后缀名字
+                // $ext = strrchr( $_FILES['image']['name'] , '.'); 
+                $str=strrchr($v,'.');
+                // 全名
+                $name = $name.$str;
+                // var_dump($name);
+
+                // 移动图片
+                move_uploaded_file($_FILES['image']['tmp_name'][$k],$root.$date.'/'.$name);
+                echo($root.$date.'/'.$name).'<hr>';
+        }
     }
 }
