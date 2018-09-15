@@ -144,7 +144,56 @@ class BlogController{
         $date = date('Ymd');
          // 生成 Excel 文件
         $writer = new Xlsx($spreadsheet);
-        // $writer->save(ROOT . 'excel/'.$date.'.xlsx');
-        $writer->save(ROOT . 'hello-world.xlsx');
+        
+        $writer->save(ROOT . 'execl/'.$date.'.xlsx');
+
+        // 调用 header 函数设置协议头，告诉浏览器开始下载文件
+
+        // 下载文件路径
+        $file = ROOT . 'excel/'.$date.'.xlsx';
+        // 下载时文件名
+        $fileName = '最新的20条日志-'.$date.'.xlsx';
+
+        // 告诉浏览器这是一个二进程文件流    
+        Header ( "Content-Type: application/octet-stream" ); 
+        // 请求范围的度量单位  
+        Header ( "Accept-Ranges: bytes" );  
+        // 告诉浏览器文件尺寸    
+        Header ( "Accept-Length: " . filesize ( $file ) );  
+        // 开始下载，下载时的文件名
+        Header ( "Content-Disposition: attachment; filename=" . $fileName );    
+
+        // 读取服务器上的一个文件并以文件流的形式输出给浏览器
+        readfile($file);
+    }
+
+    // 点赞
+    public function agreements(){
+        $id = $_GET['id'];
+        // 判断登录
+        if(!isset($_SESSION['id'])){
+            echo json_encode([
+                'status_code'=>'403',
+                'message'=>'必须先登录'
+            ]);
+            exit;
+        }
+
+        // 判断是否已经点赞过这个日志
+        $blog = new \models\Blog;
+        $ret=$blog->agree($id);
+        if($ret){
+            echo json_encode([
+                'status_code'=>'200',
+            ]);
+            exit;
+        }else{
+            echo json_encode([
+                'status_code'=>'200',
+                'message'=>'已经点赞过 不可以重复点赞',
+            ]);
+            exit;
+        }
+        // $blog->($id);
     }
 }

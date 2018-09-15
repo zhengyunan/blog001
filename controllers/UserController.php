@@ -151,29 +151,17 @@ class UserController{
     }
 
     public function setavatar(){
-        //先创建目录
-        $root = ROOT.'public/uploads/';
-        //今天的日期目录
-        $date = date('Ymd');
-        if(!is_dir($root.$date)){
-            mkdir($root.$date,0777);
-            
-        }
+        $upload = \libs\Uploader::make();
+        $path=$upload->upload('avatar','avatar');
+        // echo $path;
+        // 保存到数据库中
+        $model = new User;
+        $model->setAvatar('uploads/'.$path);
 
-        // 生成唯一文件名
-        $name = md5(time().rand(1,9999));//32位字符串
-        
-        // 补上文件后缀
-        // 先取出原来后缀名字
-        // $ext = strrchr( $_FILES['image']['name'] , '.'); 
-        $str=strrchr($_FILES['avatar']['name'],'.');
-        // 全名
-        $name = $name.$str;
-        // var_dump($name);
-
-        // 移动图片
-        move_uploaded_file($_FILES['avatar']['tmp_name'],$root.$date.'/'.$name);
-        // echo($root.$date.'/'.$name);
+        // 删除原图
+        @unlink( ROOT . 'public'.$_SESSION['avatar'] );
+        $_SESSION['avatar'] = '/uploads/'.$path;
+        message('设置成功', 2, '/blog/index');
     }
 
 

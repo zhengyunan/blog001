@@ -205,4 +205,25 @@ class Blog extends Base{
     public function deleteHtml($id){
         @unlink(ROOT.'public/contents/'.$id.'.html');
     }
+
+    // 判断是否点过赞
+    public function agree($id){
+        $stmt=self::$pdo->prepare("SELECT COUNT(*) FROM blog_agrees WHERE user_id=? AND blog_id=?");
+        $stmt->execute([
+            $_SESSION['id'],
+            $id,
+        ]); 
+        $count=$stmt->fetch(PDO::FETCH_COLUMN);
+        if($count==1){
+            return FALSE;
+        }
+
+        //点赞
+        $stmt=self::$pdo->prepare("INSERT INTO blog_agrees(user_id,blog_id) VALUES(?,?)");
+        return $stmt->execute([
+            $_SESSION['id'],
+            $id,
+        ]);
+    }
+
 }

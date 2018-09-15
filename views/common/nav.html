@@ -24,17 +24,17 @@
 <?php if(isset($_SESSION['id'])):?>
      <a href="/user/charge">充值</a>
      <a href="/user/avatar">设置头像</a>
-     <a href="/user/album">设置头像</a>
+     <a href="/user/album">设置相册</a>
      <a href="/user/orders">充值列表</a>
      <a href="/blog/index">日志列表</a>
      <a href="/blog/makeExcel">导出EXCEL</a>
-    <a href="/blog/create">发表日志</a>
-   
+     <a href="/blog/create">发表日志</a>
+     <img style="width:50px;height:50px;border-radius: 50%;vertical-align: middle;" src="<?=$_SESSION['avatar']?>" alt="">
     <?=$_SESSION['email']?>
     （ <span id="span-money" style="color:#F00;font-weight:bold;"><?=$_SESSION['money']?></span> 元
     <input id="updated_money" type="button" value="更新余额">）
      <script>
-         $("#update-money").click(function(){
+         $("#update-money").click(function(){ 
             $("#span-money").load("/user/money");
         });
      </script>

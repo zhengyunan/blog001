@@ -2,7 +2,13 @@
 namespace models;
 use PDO;
 class User extends Base{
-    
+    public function setAvatar($path){
+           $stmt=self::$pdo->prepare('UPDATE users SET avatar=? WHERE id=?');
+           $stmt->execute([
+            $path,
+            $_SESSION['id'],
+           ]);
+    }
     public function add($email,$password){
        $stmt=self::$pdo->prepare("INSERT INTO users(email,password) VALUES(?,?)");
       return $stmt->execute([
@@ -22,6 +28,7 @@ class User extends Base{
             $_SESSION['id']=$user['id'];
             $_SESSION['email']=$user['email'];
             $_SESSION['money'] = $user['money'];
+            $_SESSION['avatar'] = $user['avatar'];
             return TRUE;
         }else{
             return FALSE;
