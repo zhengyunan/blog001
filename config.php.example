@@ -20,5 +20,6 @@ return [
         'pass' => 'zyn990607',
         'from_email' => 'zhengyunan01@126.com',
         'from_name' => '郑宇楠',
-    ]
+    ],
+    'mode' => 'dev',     //  dev （开发模式）   pro（上线模式)
 ];

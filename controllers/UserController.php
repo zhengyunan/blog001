@@ -156,7 +156,7 @@ class UserController{
         // echo $path;
         // 保存到数据库中
         $model = new User;
-        $model->setAvatar('uploads/'.$path);
+        $model->setAvatar('/uploads/'.$path);
 
         // 删除原图
         @unlink( ROOT . 'public'.$_SESSION['avatar'] );

@@ -54,4 +54,10 @@ class User extends Base{
         $_SESSION['money'] = $money;
         return $money;
     }
+
+    public function getAll()
+        {
+            $stmt = self::$pdo->query('SELECT * FROM users');
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
 } 

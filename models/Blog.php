@@ -208,7 +208,7 @@ class Blog extends Base{
 
     // 判断是否点过赞
     public function agree($id){
-        $stmt=self::$pdo->prepare("SELECT COUNT(*) FROM blog_agrees WHERE user_id=? AND blog_id=?");
+        $stmt=self::$pdo->prepare("SELECT COUNT(*) FROM blog_agree WHERE user_id=? AND blog_id=?");
         $stmt->execute([
             $_SESSION['id'],
             $id,
@@ -219,11 +219,22 @@ class Blog extends Base{
         }
 
         //点赞
-        $stmt=self::$pdo->prepare("INSERT INTO blog_agrees(user_id,blog_id) VALUES(?,?)");
+        $stmt=self::$pdo->prepare("INSERT INTO blog_agree(user_id,blog_id) VALUES(?,?)");
         return $stmt->execute([
             $_SESSION['id'],
             $id,
         ]);
     }
 
+    public function agreeList($id){
+        $sql = 'SELECT b.id,b.email,b.avatar
+             FROM blog_agree a
+              LEFT JOIN users b ON a.user_id = b.id
+               WHERE a.blog_id=?';
+        $stmt = self::$pdo->prepare($sql);
+        $stmt->execute([
+            $id,
+        ]);
+        return $stmt->fetchAll( PDO::FETCH_ASSOC );
+    }
 }

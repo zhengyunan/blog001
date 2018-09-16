@@ -189,11 +189,26 @@ class BlogController{
             exit;
         }else{
             echo json_encode([
-                'status_code'=>'200',
+                'status_code'=>'403',
                 'message'=>'已经点赞过 不可以重复点赞',
             ]);
             exit;
         }
         // $blog->($id);
+    }
+
+    // 点赞列表
+    public function agreements_list(){
+          $id = $_GET['id'];
+          // 获取这个日志所有点赞的用户
+          $model = new \models\Blog;
+          $data=$model->agreeList($id);
+        //   var_dump($data);
+          echo json_encode([
+            'status_code'=>'200',
+            'data'=>$data,
+        ]);
+
+
     }
 }
