@@ -4,11 +4,41 @@
     <meta charset="UTF-8">
     <title>设置头像</title>
 </head>
+<style>
+    .img-container {
+        width: 500px;
+        height: 500px;
+        float:left;
+    }
+    .img-preview {
+        float: left;
+        overflow: hidden;
+        margin-left: 20px;
+    }
+    .preview-lg {
+        width: 240px;
+        height: 240px;
+    }
+    .preview-md {
+        width: 80px;
+        height: 80px;
+    }
+    </style>
 <body>
     <?php view('common.nav') ?>
 
     <h1>设置头像</h1>
     <form action="/user/setavatar" method="post" enctype="multipart/form-data">
+        <?=csrf_field()?>
+         <!-- 显示原图 -->
+        <div class="img-container">
+            <img id="image" src="" alt="">
+        </div>
+        <!-- 预览图片 -->
+        <div class="docs-preview clearfix">
+            <div class="img-preview preview-lg"></div>
+            <div class="img-preview preview-md"></div>
+        </div>
         <div>
             选择头像
             <input id="img" type="file" name="avatar">
@@ -16,53 +46,65 @@
         <div>
             <input type="submit" value="设置头像">
         </div>
+        <div>
+            x<input type="text" name="x" id="x">
+            y<input type="text" name="y" id="y">
+            w<input type="text" name="w" id="w">
+            h<input type="text" name="h" id="h">
+        </div>
     </form>
 
     <?php view('common.footer') ?>
 </body>
 </html>
 <script src="/simditor-2.3.6/scripts/jquery.min.js"></script>
+<script src="/cropper/cropper.min.js"></script>
+<link rel="stylesheet" href="/cropper/cropper.min.css">
 
 <script>
-      var img = document.getElementById('img');
-      img.onchange = function(){
-          var img1 = this.files[0];
-        //   获取每张图片的尺寸
-          var fileSize = img1.size;
-        //   每块的尺寸
-          var perSize =4096;
-        // 计算有多少块
-          var count = Math.ceil(fileSize/perSize);
-        //   document.write(count);
-        // 为所有分片生成随机的名字
-        var name = "img_"+Math.random(1,99999);
-        for(var i=0;i<count;i++){
-            // slice(开始的地方,结束的地方)
-            var img0 = img1.slice(i*perSize,i*perSize+perSize)
-            
-            // 创建一个FormData表单
-            var f = new FormData();
-            // 把分割的图片数据加到表单中
-            f.append('img',img0);
-            // 把能分割的块数加到表单中
-            f.append('count',count);  
-            //当前的快数
-            f.append('i',i)
-            f.append('size', perSize)  // 每块尺寸
-            f.append('img_name', name)  // 名字
-            //执行ajax上传到服务器
-            $.ajax({
-                type:"POST",
-                url:"/user/uploadbig",
-                data:f,
-                contentType: false,
-                processData: false,
-                success:function(data){
-
-                }
+    var $image = $('#image')
+    var x=$('#x')
+    var y=$('#y')
+    var w=$('#w')
+    var h=$('#h')
+     $("#img").change(function(){
+            // 把选中的图片转为字符串
+            // this.files  当前选中的数组
+            // 选中的图片的临时地址
+            var url=getObjectUrl(this.files[0]);
+            //把图片的地址设置到图片的src上
+            $image.attr('src',url)
+            // 先消毁原插件 
+            $image.cropper("destroy")
+            //   console.log(str);
+            $image.cropper({
+            aspectRatio: 1,                              // 缩略图1:1的比例
+            preview:'.img-preview',                      // 显示缩略图的框
+            viewMode:3,                                  // 显示模式
+            // 裁切时触发事件
+            crop: function(event) {
+                x.val(event.detail.x);             // 裁切区域左上角x坐标
+                y.val(event.detail.y);             // 裁切区域左上角y坐标
+                w.val(event.detail.width);         // 裁切区域宽高
+                h.val(event.detail.height);        // 裁切区域高度
+               }
             });
-        }
-      }
-</script>
+     });
+    // // 把选中的图片转为字符串
+    // // this.files  当前选中的数组
+    // getObjectUrl(this.files[0])
+    
 
+    function getObjectUrl(file) {
+    var url = null;
+    if (window.createObjectURL != undefined) {
+        url = window.createObjectURL(file)
+    } else if (window.URL != undefined) {
+        url = window.URL.createObjectURL(file)
+    } else if (window.webkitURL != undefined) {
+        url = window.webkitURL.createObjectURL(file)
+    }
+    return url
+}
+</script>
 
