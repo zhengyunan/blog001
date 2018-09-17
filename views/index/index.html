@@ -20,9 +20,11 @@
         
     </ul>
     <?php view('common.footer') ?>
+    <?php if(config('mode')=='dev'):?>
     <select id="alluser">
         <option value="">选择账号</option>
     </select>
+    <?php endif; ?>
 </body>
 </html>
 <script
@@ -46,7 +48,7 @@
             }
         }
     });
-    <?php if($config('mode')=='dev'):?>
+    <?php if(config('mode')=='dev'):?>
     $("#alluser").change(function(){
         //获取院中的值
         var email = $(this).val()
@@ -58,8 +60,8 @@
                     // 刷新页面
                     location.reload();
                 }
-            })
+            });
         }
-    })
+    });
     <?php endif; ?>
 </script>
