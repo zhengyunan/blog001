@@ -28,7 +28,12 @@ class User extends Base{
             $_SESSION['id']=$user['id'];
             $_SESSION['email']=$user['email'];
             $_SESSION['money'] = $user['money'];
-            $_SESSION['avatar'] = $user['avatar'];
+            if($user['avatar']==''){
+                $_SESSION['avatar']='/images/avatar.png';
+            }else{
+                $_SESSION['avatar'] = $user['avatar'];
+            }
+            
             return TRUE;
         }else{
             return FALSE;
