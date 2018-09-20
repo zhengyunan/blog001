@@ -60,6 +60,73 @@ class User extends Base{
         return $money;
     }
 
+
+    // 活跃用户
+    public function computeActineUsers(){
+        $stmt = self::$pdo->query(
+            'SELECT user_id,COUNT(*)*5 fz FROM 
+            mvc_blogs WHERE created_at >= DATE_SUB(CURDATE(), INTERVAL 1 WEEK) GROUP BY user_id');
+        $data1 = $stmt->fetchAll(PDO::FETCH_ASSOC); 
+
+        $stmt = self::$pdo->query(
+            'SELECT user_id,COUNT(*)*3 fz FROM 
+            comments WHERE created_at >= DATE_SUB(CURDATE(), INTERVAL 1 WEEK) GROUP BY user_id');
+        $data2 = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        $stmt = self::$pdo->query(
+            'SELECT user_id,COUNT(*) fz FROM 
+            blog_agree WHERE created_at >= DATE_SUB(CURDATE(), INTERVAL 1 WEEK) GROUP BY user_id');
+        $data3 = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
+        // 合并数组
+        $arr = [];
+        // 合并第一个数组到空数组中
+        foreach($data1 as $v){
+            $arr[$v['user_id']]=$v['fz'];
+        }
+        foreach($data2 as $v){
+            if(isset($arr['user_id'])){
+                $arr[$v['user_id']]+=$v['fz'];
+            }else{
+                $arr[$v['user_id']]=$v['fz'];
+            }
+        }
+
+        foreach($data3 as $v){
+            if(isset($arr['user_id'])){
+                $arr[$v['user_id']]+=$v['fz'];
+            }else{
+                $arr[$v['user_id']]=$v['fz'];
+            }
+        }
+        // 倒序
+        arsort($arr);
+
+        // 取出前二十
+        $data = array_slice($arr,0,20,TRUE);
+
+        $userIds = array_keys($data);
+        // echo "<pre>";
+        // var_dump($userIds);
+        $userIds = implode(',',$userIds);
+
+        // 根据用户id取出用户头像和email
+        $sql = "SELECT avatar,email FROM users WHERE id IN($userIds)";
+        $stmt = self::$pdo->query($sql);
+        $data=$stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        // 保存到redis中
+        $redis = \libs\Redis::getInstance();
+        $redis->set('active_users',json_encode($data));
+        // var_dump($data);
+    }
+    public function getActiveUser(){
+        $redis = \libs\Redis::getInstance();
+        $data=$redis->get('active_users');
+        return json_decode($data,true);
+    }
+
     public function getAll()
         {
             $stmt = self::$pdo->query('SELECT * FROM users');

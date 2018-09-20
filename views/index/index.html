@@ -19,6 +19,18 @@
         <?php endforeach; ?>
         
     </ul>
+    <h1>活跃用户</h1>
+    <ul>
+        <?php foreach($users as $v): ?>
+
+            <li>
+                <img size="50" height="50" src="<?=$v['avatar']?$v['avatar']:'/images/avatar.png'?>" title="<?= $v['email']?>" alt="">
+                <a href=""><?=$v['email']?></a>
+            </li>
+
+        <?php endforeach; ?>
+        
+    </ul>
     <?php view('common.footer') ?>
     <?php if(config('mode')=='dev'):?>
     <select id="alluser">

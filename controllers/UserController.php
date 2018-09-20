@@ -245,4 +245,9 @@ class UserController{
         }
 
     }
+    public function getActiveUsers(){
+        $user = new \models\User;
+        $user->computeActineUsers();
+        // echo "123";
+    }
 }
